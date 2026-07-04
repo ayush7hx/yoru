@@ -393,6 +393,30 @@ nav a.active {
   text-transform: uppercase;
 }
 
+/* ── MEDICAL ILLUSTRATION ── */
+.medical-frame {
+  width: 220px;
+  height: 280px;
+  margin: 0 auto 40px;
+  background: #060202;
+  border: 1px solid #1a0a0a;
+  position: relative;
+  animation: fadeUp 1s ease forwards;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 40px rgba(139, 32, 32, 0.08);
+}
+
+.medical-frame:hover {
+  box-shadow: 0 0 60px rgba(139, 32, 32, 0.18);
+  border-color: #2a0f0f;
+}
+
+.medical-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 .about-bio {
   font-size: 15px;
   line-height: 2;

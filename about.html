@@ -48,15 +48,63 @@
       <h1 class="page-title">About</h1>
       <div class="page-divider"></div>
 
-      <!-- PHOTO -->
-      <div class="photo-frame" id="photo-frame">
-        <div class="photo-placeholder">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="1">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-            <circle cx="12" cy="7" r="4"/>
-          </svg>
-          <span>Photo</span>
-        </div>
+      <!-- MEDICAL ILLUSTRATION -->
+      <div class="medical-frame" id="photo-frame">
+        <svg viewBox="0 0 220 280" xmlns="http://www.w3.org/2000/svg" class="medical-svg">
+
+          <!-- Outer border glow -->
+          <rect x="1" y="1" width="218" height="278" fill="none" stroke="#1a0a0a" stroke-width="1"/>
+          <rect x="5" y="5" width="210" height="270" fill="none" stroke="#1f0e0e" stroke-width="0.5"/>
+
+          <!-- Background cross (faint) -->
+          <rect x="98" y="20" width="24" height="240" fill="#0d0505" rx="2"/>
+          <rect x="20" y="98" width="180" height="24" fill="#0d0505" rx="2"/>
+
+          <!-- Caduceus staff -->
+          <line x1="110" y1="40" x2="110" y2="230" stroke="#2a1010" stroke-width="2.5"/>
+
+          <!-- Caduceus wings (top) -->
+          <path d="M110 68 C85 55, 72 42, 80 32 C88 22, 105 30, 110 55" 
+                fill="none" stroke="#6b1a1a" stroke-width="1.5" opacity="0.8"/>
+          <path d="M110 68 C135 55, 148 42, 140 32 C132 22, 115 30, 110 55" 
+                fill="none" stroke="#6b1a1a" stroke-width="1.5" opacity="0.8"/>
+
+          <!-- Snake 1 (left spiral) -->
+          <path d="M110 80 C95 90, 88 105, 100 115 C112 125, 120 140, 105 152 C90 164, 88 178, 102 188 C108 192, 110 195, 110 200"
+                fill="none" stroke="#8b2020" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+
+          <!-- Snake 2 (right spiral) -->
+          <path d="M110 80 C125 90, 132 105, 120 115 C108 125, 100 140, 115 152 C130 164, 132 178, 118 188 C112 192, 110 195, 110 200"
+                fill="none" stroke="#8b2020" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+
+          <!-- Snake heads -->
+          <circle cx="104" cy="204" r="4" fill="none" stroke="#8b2020" stroke-width="1.2"/>
+          <circle cx="116" cy="204" r="4" fill="none" stroke="#8b2020" stroke-width="1.2"/>
+
+          <!-- Staff tip orb -->
+          <circle cx="110" cy="38" r="5" fill="none" stroke="#6b1a1a" stroke-width="1.2"/>
+          <circle cx="110" cy="38" r="2" fill="#8b2020" opacity="0.6"/>
+
+          <!-- Staff bottom -->
+          <line x1="110" y1="212" x2="110" y2="228" stroke="#2a1010" stroke-width="2.5"/>
+          <path d="M100 228 L110 235 L120 228" fill="none" stroke="#3a1515" stroke-width="1.2"/>
+
+          <!-- Heartbeat line -->
+          <polyline 
+            points="20,248 48,248 56,235 64,260 72,240 80,248 140,248 148,238 156,255 162,248 200,248"
+            fill="none" stroke="#8b2020" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+
+          <!-- Corner ornaments -->
+          <text x="14" y="22" fill="#3a1515" font-size="10" opacity="0.8">✦</text>
+          <text x="196" y="22" fill="#3a1515" font-size="10" opacity="0.8">✦</text>
+          <text x="14" y="272" fill="#3a1515" font-size="10" opacity="0.8">✦</text>
+          <text x="196" y="272" fill="#3a1515" font-size="10" opacity="0.8">✦</text>
+
+          <!-- Label -->
+          <text x="110" y="270" text-anchor="middle" fill="#3a2020" 
+                font-family="serif" font-size="7" letter-spacing="3" opacity="0.9">M E D I C I N E</text>
+
+        </svg>
       </div>
 
       <!-- BIO -->
