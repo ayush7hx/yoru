@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap');
 
 *, *::before, *::after {
   margin: 0;
@@ -129,8 +129,8 @@ nav a.active {
 }
 
 .home-name {
-  font-family: 'Pirata One', cursive;
-  font-size: clamp(72px, 11.5vw, 148px);
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: clamp(60px, 9vw, 110px);
   line-height: 1.0;
   color: var(--white);
   letter-spacing: 0.02em;
@@ -334,7 +334,7 @@ nav a.active {
 }
 
 .page-title {
-  font-family: 'Pirata One', cursive;
+  font-family: 'UnifrakturMaguntia', cursive;
   font-size: clamp(38px, 6vw, 64px);
   color: var(--white);
   margin-bottom: 8px;
