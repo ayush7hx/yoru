@@ -130,7 +130,7 @@ nav a.active {
 
 .home-name {
   font-family: 'UnifrakturMaguntia', cursive;
-  font-size: clamp(60px, 9vw, 110px);
+  font-size: clamp(80px, 12.5vw, 155px);
   line-height: 1.0;
   color: var(--white);
   letter-spacing: 0.02em;
