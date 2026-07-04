@@ -130,8 +130,8 @@ nav a.active {
 
 .home-name {
   font-family: 'UnifrakturMaguntia', cursive;
-  font-size: clamp(52px, 8vw, 100px);
-  line-height: 1.05;
+  font-size: clamp(68px, 11vw, 140px);
+  line-height: 1.0;
   color: var(--white);
   letter-spacing: 0.02em;
   animation: fadeUp 1.2s ease forwards;
@@ -142,18 +142,35 @@ nav a.active {
   font-size: 11px;
   letter-spacing: 0.45em;
   color: var(--dim);
-  margin-top: 20px;
+  margin-top: 24px;
   text-transform: uppercase;
   animation: fadeUp 1.4s ease forwards;
 }
 
-.home-dot {
+/* ── AKA SEPARATOR ── */
+.aka-rule {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0 16px;
+  width: 200px;
+  animation: fadeUp 1.45s ease forwards;
+}
+.aka-line-left,
+.aka-line-right {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #3a3028);
+}
+.aka-line-right {
+  background: linear-gradient(to left, transparent, #3a3028);
+}
+.aka-dot {
   width: 4px;
   height: 4px;
   border-radius: 50%;
   background: var(--accent);
-  margin: 16px auto;
-  animation: fadeUp 1.5s ease forwards;
+  flex-shrink: 0;
 }
 
 .home-location {
@@ -162,7 +179,7 @@ nav a.active {
   font-size: 16px;
   color: var(--dim);
   letter-spacing: 0.15em;
-  animation: fadeUp 1.6s ease forwards;
+  animation: fadeUp 1.5s ease forwards;
 }
 
 /* ── CLOCK ── */
@@ -171,7 +188,9 @@ nav a.active {
   display: flex;
   align-items: center;
   gap: 12px;
-  animation: fadeUp 1.7s ease forwards;
+  border: 1px solid #252525;
+  padding: 8px 20px;
+  animation: fadeUp 1.6s ease forwards;
 }
 
 .clock-label {
