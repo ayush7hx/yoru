@@ -556,10 +556,113 @@ nav a.active {
 }
 
 /* ── RESPONSIVE ── */
-@media (max-width: 640px) {
-  .side-ornament { display: none; }
-  nav { gap: 28px; }
-  .age-timer-grid { gap: 14px; }
-  .age-sep { display: none; }
-  .photo-frame { width: 160px; height: 210px; }
-}
+  @media (max-width: 768px) {
+    .side-ornament { display: none; }
+
+    nav {
+      gap: 20px;
+      padding: 16px 0;
+    }
+
+    nav a {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+    }
+
+    .page {
+      padding: 80px 20px 50px;
+    }
+
+    .about-wrap {
+      max-width: 100%;
+      padding: 0 8px;
+    }
+
+    .page-title {
+      font-size: clamp(40px, 12vw, 60px);
+    }
+
+    .photo-frame {
+      width: 180px;
+      height: 240px;
+      margin: 0 auto 32px;
+    }
+
+    .about-bio {
+      font-size: 16px;
+      line-height: 1.85;
+      padding: 0 4px;
+    }
+
+    .interests-wrap {
+      gap: 8px;
+      padding: 0 4px;
+    }
+
+    .interest-tag {
+      font-size: 9px;
+      padding: 7px 12px;
+    }
+
+    .back-link {
+      margin-top: 36px;
+      font-size: 10px;
+    }
+
+    /* Home page mobile */
+    .home-name {
+      font-size: clamp(48px, 15vw, 80px);
+    }
+
+    .home-nav-btns {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-outline {
+      padding: 12px 40px;
+      width: 220px;
+      text-align: center;
+    }
+
+    .clock-wrap {
+      padding: 8px 16px;
+      gap: 8px;
+    }
+
+    .age-timer-grid {
+      gap: 12px;
+    }
+
+    .age-sep { display: none; }
+
+    /* FAQ mobile */
+    .faq-wrap {
+      max-width: 100%;
+      padding: 0 4px;
+    }
+
+    .faq-a {
+      font-size: 14px;
+    }
+
+    /* Contact mobile */
+    .contact-wrap {
+      max-width: 100%;
+      padding: 0 8px;
+    }
+
+    .contact-note {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    nav { gap: 14px; }
+    nav a { font-size: 9px; letter-spacing: 0.15em; }
+    .photo-frame { width: 150px; height: 200px; }
+    .about-bio { font-size: 15px; }
+    .page-title { font-size: clamp(36px, 13vw, 52px); }
+  }
+  
