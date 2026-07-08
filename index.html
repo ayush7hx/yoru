@@ -1,118 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ayush Arya — aka Yoru</title>
-  <link rel="stylesheet" href="style.css?v=9" />
-</head>
-<body>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayush Arya — aka Yoru</title>
+    <link rel="stylesheet" href="style.css?v=10" />
+  </head>
+  <body>
 
-  <!-- NAV -->
-  <nav>
-    <a href="about.html">About</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+    <!-- AMBIENT PARTICLES -->
+    <div id="particles"></div>
 
-  <!-- LEFT ORNAMENT -->
-  <div class="side-ornament left">
-    <svg viewBox="0 0 24 24"><path d="M12 2C9.5 6 6 7.5 2 8c3.5 1 5.5 3 6 6 .5-3 2.5-5 6-6-4-.5-7.5-2-8-6zm0 0"/></svg>
-    <div class="orn-line"></div>
-    <div class="orn-dot"></div>
-    <div class="orn-line"></div>
-    <svg viewBox="0 0 24 24"><path d="M12 21.6l-1.6-1.6C5.4 15.2 2 12.3 2 8.7 2 5.9 4.2 4 6.5 4c1.7 0 3.4.9 4.5 2.3C12.1 4.9 13.8 4 15.5 4 17.8 4 20 5.9 20 8.7c0 3.6-3.4 6.5-8.4 11.3L12 21.6z"/></svg>
-    <div class="orn-line"></div>
-    <div class="orn-dot"></div>
-    <div class="orn-line"></div>
-    <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-  </div>
+    <!-- NAV -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
 
-  <!-- RIGHT ORNAMENT -->
-  <div class="side-ornament right">
-    <svg viewBox="0 0 24 24"><path d="M12 2C9.5 6 6 7.5 2 8c3.5 1 5.5 3 6 6 .5-3 2.5-5 6-6-4-.5-7.5-2-8-6zm0 0"/></svg>
-    <div class="orn-line"></div>
-    <div class="orn-dot"></div>
-    <div class="orn-line"></div>
-    <svg viewBox="0 0 24 24"><path d="M12 21.6l-1.6-1.6C5.4 15.2 2 12.3 2 8.7 2 5.9 4.2 4 6.5 4c1.7 0 3.4.9 4.5 2.3C12.1 4.9 13.8 4 15.5 4 17.8 4 20 5.9 20 8.7c0 3.6-3.4 6.5-8.4 11.3L12 21.6z"/></svg>
-    <div class="orn-line"></div>
-    <div class="orn-dot"></div>
-    <div class="orn-line"></div>
-    <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-  </div>
+    <!-- FLOATING CROSS DECORATION -->
+    <div class="floating-cross">+</div>
 
-  <!-- HOME CONTENT -->
-  <div class="page">
-    <div class="home-wrap">
+    <!-- LEFT ORNAMENT -->
+    <div class="side-ornament left">
+      <svg viewBox="0 0 24 24"><path d="M12 2C9.5 6 6 7.5 2 8c3.5 1 5.5 3 6 6 .5-3 2.5-5 6-6-4-.5-7.5-2-8-6zm0 0"/></svg>
+      <div class="orn-line"></div>
+      <div class="orn-dot"></div>
+      <div class="orn-line"></div>
+      <svg viewBox="0 0 24 24"><path d="M12 21.6l-1.6-1.6C5.4 15.2 2 12.3 2 8.7 2 5.9 4.2 4 6.5 4c1.7 0 3.4.9 4.5 2.3C12.1 4.9 13.8 4 15.5 4 17.8 4 20 5.9 20 8.7c0 3.6-3.4 6.5-8.4 11.3L12 21.6z"/></svg>
+      <div class="orn-line"></div>
+      <div class="orn-dot"></div>
+      <div class="orn-line"></div>
+      <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+    </div>
 
-      <div class="cross-top">✦</div>
+    <!-- RIGHT ORNAMENT -->
+    <div class="side-ornament right">
+      <svg viewBox="0 0 24 24"><path d="M12 2C9.5 6 6 7.5 2 8c3.5 1 5.5 3 6 6 .5-3 2.5-5 6-6-4-.5-7.5-2-8-6zm0 0"/></svg>
+      <div class="orn-line"></div>
+      <div class="orn-dot"></div>
+      <div class="orn-line"></div>
+      <svg viewBox="0 0 24 24"><path d="M12 21.6l-1.6-1.6C5.4 15.2 2 12.3 2 8.7 2 5.9 4.2 4 6.5 4c1.7 0 3.4.9 4.5 2.3C12.1 4.9 13.8 4 15.5 4 17.8 4 20 5.9 20 8.7c0 3.6-3.4 6.5-8.4 11.3L12 21.6z"/></svg>
+      <div class="orn-line"></div>
+      <div class="orn-dot"></div>
+      <div class="orn-line"></div>
+      <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+    </div>
 
-      <h1 class="home-name">Ayush Arya</h1>
+    <!-- HOME CONTENT -->
+    <div class="page">
+      <div class="home-wrap">
 
-      <p class="home-aka">A K A &nbsp; Y O R U</p>
+        <div class="cross-top">✦</div>
 
-      <!-- separator line with dot -->
-      <div class="aka-rule">
-        <span class="aka-line-left"></span>
-        <span class="aka-dot"></span>
-        <span class="aka-line-right"></span>
-      </div>
+        <h1 class="home-name">Ayush Arya</h1>
 
-      <p class="home-location">India</p>
+        <p class="home-aka">A K A &nbsp; Y O R U</p>
 
-      <!-- LIVE CLOCK -->
-      <div class="clock-wrap">
-        <span class="clock-label">IST</span>
-        <span id="live-clock">00:00:00</span>
-        <span class="clock-tz">India</span>
-      </div>
+        <div class="aka-rule">
+          <span class="aka-line-left"></span>
+          <span class="aka-dot"></span>
+          <span class="aka-line-right"></span>
+        </div>
 
-      <!-- AGE TIMER -->
-      <div class="age-timer-section">
-        <p class="age-timer-label">Time on this Earth</p>
-        <div class="age-timer-grid">
-          <div class="age-unit">
-            <span class="val" id="age-years">00</span>
-            <span class="unit-label">Years</span>
-          </div>
-          <span class="age-sep">·</span>
-          <div class="age-unit">
-            <span class="val" id="age-days">000</span>
-            <span class="unit-label">Days</span>
-          </div>
-          <span class="age-sep">·</span>
-          <div class="age-unit">
-            <span class="val" id="age-hours">00</span>
-            <span class="unit-label">Hours</span>
-          </div>
-          <span class="age-sep">·</span>
-          <div class="age-unit">
-            <span class="val" id="age-minutes">00</span>
-            <span class="unit-label">Min</span>
-          </div>
-          <span class="age-sep">·</span>
-          <div class="age-unit">
-            <span class="val" id="age-seconds">00</span>
-            <span class="unit-label">Sec</span>
+        <p class="home-location">India</p>
+
+        <!-- LIVE CLOCK -->
+        <div class="clock-wrap">
+          <span class="clock-label">IST</span>
+          <span id="live-clock">00:00:00</span>
+          <span class="clock-tz">India</span>
+        </div>
+
+        <!-- AGE TIMER -->
+        <div class="age-timer-section">
+          <p class="age-timer-label">Time on this Earth</p>
+          <div class="age-timer-grid">
+            <div class="age-unit">
+              <span class="val" id="age-years">00</span>
+              <span class="unit-label">Years</span>
+            </div>
+            <span class="age-sep">·</span>
+            <div class="age-unit">
+              <span class="val" id="age-days">000</span>
+              <span class="unit-label">Days</span>
+            </div>
+            <span class="age-sep">·</span>
+            <div class="age-unit">
+              <span class="val" id="age-hours">00</span>
+              <span class="unit-label">Hours</span>
+            </div>
+            <span class="age-sep">·</span>
+            <div class="age-unit">
+              <span class="val" id="age-minutes">00</span>
+              <span class="unit-label">Min</span>
+            </div>
+            <span class="age-sep">·</span>
+            <div class="age-unit">
+              <span class="val" id="age-seconds">00</span>
+              <span class="unit-label">Sec</span>
+            </div>
           </div>
         </div>
+
+        <!-- NAV BUTTONS -->
+        <div class="home-nav-btns">
+          <a href="about.html" class="btn-outline">About</a>
+          <a href="faq.html" class="btn-outline">FAQ</a>
+          <a href="contact.html" class="btn-outline">Contact</a>
+        </div>
+
+        <!-- PHILOSOPHY QUOTE -->
+        <p class="philosophy-quote">Become better than yesterday, not better than everyone else.</p>
+        <p class="philosophy-quote chinese">要像伊卡洛斯一样</p>
+
+        <div class="cross-bottom">✦</div>
+
       </div>
-
-      <!-- NAV BUTTONS -->
-      <div class="home-nav-btns">
-        <a href="about.html" class="btn-outline">About</a>
-        <a href="faq.html" class="btn-outline">FAQ</a>
-        <a href="contact.html" class="btn-outline">Contact</a>
-      </div>
-
-      <!-- QUOTE -->
-      <p class="home-quote">Become better than yesterday, not better than everyone else.</p>
-
-      <div class="cross-bottom">✦</div>
-
     </div>
-  </div>
 
-  <script src="script.js"></script>
-</body>
-</html>
+    <script src="script.js?v=10"></script>
+  </body>
+  </html>
