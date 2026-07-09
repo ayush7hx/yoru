@@ -12,38 +12,53 @@
   }
 
   // ── AGE / LIFE TIMER ──────────────────────────────────
-  const DOB_YEAR = 2009, DOB_MONTH = 11, DOB_DAY = 14; // 0-indexed month
+  // DOB: 14 December 2009, 20:30 IST (8:30 PM)
+  // IST = UTC+5:30, so birth in UTC = 14 Dec 2009 15:00:00 UTC
+  const BIRTH_UTC_MS = Date.UTC(2009, 11, 14, 15, 0, 0); // month is 0-indexed: 11 = December
+
+  const DOB_YEAR = 2009, DOB_MONTH = 11, DOB_DAY = 14; // for year calc
   const IST_OFFSET_MS = (5 * 60 + 30) * 60 * 1000;
 
   function nowIST() { return new Date(Date.now() + IST_OFFSET_MS); }
 
-  function calcAge(now) {
-    const y = now.getUTCFullYear(), mo = now.getUTCMonth(), d = now.getUTCDate();
-    const h = now.getUTCHours(), mi = now.getUTCMinutes(), s = now.getUTCSeconds();
+  function calcAge() {
+    const now = Date.now();
+    const nowIST_ = new Date(now + IST_OFFSET_MS);
 
+    const y  = nowIST_.getUTCFullYear();
+    const mo = nowIST_.getUTCMonth();
+    const d  = nowIST_.getUTCDate();
+    const h  = nowIST_.getUTCHours();
+    const mi = nowIST_.getUTCMinutes();
+    const s  = nowIST_.getUTCSeconds();
+
+    // Full years completed
     let years = y - DOB_YEAR;
-    if (mo < DOB_MONTH || (mo === DOB_MONTH && d < DOB_DAY)) years--;
+    // Check if this year's birthday (at 20:30 IST) has passed
+    const thisYearBdayUTC = Date.UTC(y, 11, 14, 15, 0, 0); // 14 Dec this year 20:30 IST
+    if (now < thisYearBdayUTC) years--;
 
-    const lastBdayUTC = Date.UTC(
-      (DOB_MONTH > mo || (mo === DOB_MONTH && d < DOB_DAY)) ? y - 1 : y,
-      DOB_MONTH, DOB_DAY
-    ) - IST_OFFSET_MS;
+    // Time since last birthday (exact 20:30 IST moment)
+    const lastBdayYear = now >= thisYearBdayUTC ? y : y - 1;
+    const lastBdayUTC  = Date.UTC(lastBdayYear, 11, 14, 15, 0, 0);
+    const diffMs       = now - lastBdayUTC;
 
-    const diffMs = Date.now() - lastBdayUTC;
-    const totalSec = Math.floor(diffMs / 1000);
-    const totalMin = Math.floor(totalSec / 60);
-    const totalHrs = Math.floor(totalMin / 60);
+    const totalSec  = Math.floor(diffMs / 1000);
+    const totalMin  = Math.floor(totalSec / 60);
+    const totalHrs  = Math.floor(totalMin / 60);
     const totalDays = Math.floor(totalHrs / 24);
 
     return {
-      years, days: totalDays, hours: totalHrs % 24,
-      minutes: totalMin % 60, seconds: totalSec % 60
+      years,
+      days:    totalDays,
+      hours:   totalHrs  % 24,
+      minutes: totalMin  % 60,
+      seconds: totalSec  % 60
     };
   }
 
   function updateAgeTimer() {
-    const now = nowIST();
-    const a = calcAge(now);
+    const a = calcAge();
     setEl('age-years',   String(a.years));
     setEl('age-days',    String(a.days).padStart(3, '0'));
     setEl('age-hours',   String(a.hours).padStart(2, '0'));
@@ -58,11 +73,8 @@
 
   // ── AUTO FAQ AGE UPDATE ─────────────────────────────
   function updateFaqAge() {
-    const now = nowIST();
-    const y = now.getUTCFullYear(), mo = now.getUTCMonth(), d = now.getUTCDate();
-    let age = y - DOB_YEAR;
-    if (mo < DOB_MONTH || (mo === DOB_MONTH && d < DOB_DAY)) age--;
-    setEl('faq-age', String(age));
+    const a = calcAge();
+    setEl('faq-age', String(a.years));
   }
 
   // ── PARTICLE SYSTEM ───────────────────────────────────
@@ -88,7 +100,7 @@
     updateClock(); updateAgeTimer(); updateFaqAge(); createParticles();
     setInterval(updateClock, 1000);
     setInterval(updateAgeTimer, 1000);
-    setInterval(updateFaqAge, 60000); // Check age every minute
+    setInterval(updateFaqAge, 60000);
 
     // Active nav highlight
     const path = window.location.pathname.split('/').pop() || 'index.html';
